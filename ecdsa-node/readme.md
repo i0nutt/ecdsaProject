@@ -34,7 +34,6 @@ _Hint_ - Use [nodemon](https://www.npmjs.com/package/nodemon) instead of `node` 
 My Additions to the app, App taken from https://university.alchemy.com , Ethereum crypto course, part 1, week project
 
 The process of working on this project was the following :
-etherum
 1. Incorporate Public key cryptography
    - in order to make my life easier I created a create wallet form that would return me a wallet address and a private key generated locally. Of course in real life you wouldn't want such an element but for the purpose of this project I think is fine.
    - next I made a post request to the server with the public key in order to generate a wallet from the address derived from the public key
