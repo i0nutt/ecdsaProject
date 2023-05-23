@@ -1,7 +1,8 @@
 import { useState } from "react";
 import server from "./server";
 import * as utils from './Utils';
-
+import {signMessage} from "./Utils";
+const maxInt = 100000000000;
 function Transfer({ address, setBalance, privateKey }) {
     const [sendAmount, setSendAmount] = useState("");
     const [recipient, setRecipient] = useState("");
@@ -15,8 +16,9 @@ function Transfer({ address, setBalance, privateKey }) {
                 sender : address,
                 amount : parseInt(sendAmount),
                 recipient,
-                nonce : 0,
+                nonce : Math.floor( Math.random() * maxInt ),
             };
+            console.log(utils.signMessage( JSON.stringify(message), privateKey ));
             const {
                 data: { balance },
             } = await server.post(`send`, {

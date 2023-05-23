@@ -32,7 +32,7 @@ function NewWallet( { address, setAddress, privateKey, setPrivateKey } ) {
             </label>
             <label>
                 Your Generated Private Key
-                <p style = {{ color : "red" }} >Save this locally, if you loose it you want have access to your wallet !!!</p>
+                <p style = {{ color : "red" }} >Save this locally, if you loose it you wont have access to your wallet !!!</p>
                 <input placeholder = {"Your generated private key..."} value = {privateKey} readOnly></input>
             </label>
         </form>
